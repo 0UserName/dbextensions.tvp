@@ -19,11 +19,6 @@ using Testcontainers.Ado.NUnit.Extensions;
 
 namespace DbExtensions.Tvp.Tests.Integrations
 {
-    /// <param name="dbType">
-    /// Specifies the database-specific data type used to
-    /// represent the structured data in the table-valued
-    /// parameter.
-    /// </param>
     [TestFixtureSource(typeof(DbFixtures), nameof(DbFixtures.Runners))]
     public sealed class InsertTests<TRow>(IDbRunner runner, int? dbType) : AbstractDbTests<IDbRunner>(runner) where TRow : ITableValued
     {
